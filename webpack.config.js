@@ -1,13 +1,13 @@
-const path = require('path');
-const indexHTML = require('./webpack/index.html.config.js');
+const path = require("path");
+const indexHTML = require("./webpack/index.html.config.js");
 
 module.exports = {
     entry: [
-        path.join(__dirname, 'src', 'metasphere.application.jsx')
+        path.join(__dirname, "src", "metasphere.application.jsx")
     ],
     resolve: {
         extensions: [
-            '.jsx', '.js'
+            ".jsx", ".js"
         ]
     },
     module: {
@@ -16,9 +16,9 @@ module.exports = {
                 test: /\.(jsx|js)$/,
                 exclude: /(node_modules|bower_components)/,
                 use: {
-                    loader: 'babel-loader',
+                    loader: "babel-loader",
                     options: {
-                        presets: ['react']
+                        presets: ["react"]
                     }
                 }
             }
@@ -29,8 +29,8 @@ module.exports = {
             cacheGroups: {
                 vendor: {
                     test: /node_modules/,
-                    chunks: 'all',
-                    name: 'vendor',
+                    chunks: "all",
+                    name: "vendor",
                     priority: 10,
                     enforce: true
                 }
@@ -38,18 +38,18 @@ module.exports = {
         }
     },
     output: {
-        path: path.join(__dirname, 'build'),
-        filename: '[name].js'
+        path: path.join(__dirname, "build"),
+        filename: "[name].js"
     },
     plugins: [
         indexHTML.plugin()
     ],
     devServer: {
-        host: 'localhost',
+        host: "localhost",
         port: 9090,
         open: false,
         allowedHosts: [
-            'localhost'
+            "localhost"
         ]
-    },
+    }
 };

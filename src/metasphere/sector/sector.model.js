@@ -10,4 +10,4 @@ export class Sector {
     child(id) {
         return this.sector.children[id];
     }
-};
+}
