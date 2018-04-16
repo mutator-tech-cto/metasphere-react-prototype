@@ -5,6 +5,11 @@ module.exports = {
     entry: [
         path.join(__dirname, 'src', 'metasphere.application.jsx')
     ],
+    resolve: {
+        extensions: [
+            '.jsx', '.js'
+        ]
+    },
     module: {
         rules: [
             {
