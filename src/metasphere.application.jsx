@@ -1,7 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
+
+import {Metasphere} from "./metasphere/metasphere.widget";
 
 ReactDOM.render(
-    <h1>Metasphere 0.0.1</h1>,
-    document.getElementById('metasphere')
+    <Metasphere />,
+    document.getElementById("metasphere")
 );
